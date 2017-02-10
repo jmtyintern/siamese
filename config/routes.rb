@@ -3,13 +3,12 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {
         sessions: 'users/sessions'
   }
-  get 'users/seccitons/show'
-  get 'top/index'
+  root 'top#index'
+  get 'show' => 'top#show'
 
-  get 'top/show'
-  get 'article/index'
-  get 'article/show'
+  #get 'users/seccitons/show'
+
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root 'top#index'
+
 end
