@@ -6,6 +6,10 @@
 %p
   %b Text:
   = @article.text
+- if @article.image.present?
+  %p
+    %b Image:
+    = image_tag @article.image.url
 
 = link_to 'Edit', edit_article_path(@article)
 \|
