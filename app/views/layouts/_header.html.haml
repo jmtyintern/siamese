@@ -3,8 +3,8 @@
     = link_to "sample app", '#', id: "logo"
     .ul{class:"nav navbar-nav navbar-right"}
       - if user_signed_in?
-        %li= link_to "投稿する", new_article_path
-        %li= link_to "ログアウト", destroy_user_session_path
+        %li= link_to "投稿する", new_article_path, :id => "aaa"
+        %li= link_to "ログアウト", destroy_user_session_path, :id => "aaa"
       - else
-        %li= link_to "会員登録", new_user_registration_path
-        %li= link_to "ログイン", new_user_session_path
+        %li= link_to "会員登録", new_user_registration_path, :id => "aaa"
+        %li= link_to "ログイン", new_user_session_path, :id => "aaa"
