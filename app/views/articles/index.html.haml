@@ -21,5 +21,12 @@
         %td= link_to 'Destroy', article, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
+- javascript_include_tag 'app/assets/javascripts/get_current_location.js'
 
 = link_to 'New Article', new_article_path
+- @location = Location.new
+= form_for(@location, url: near_by_locations_path, html: {method: "post"}) do |f|
+  = f.hidden_field :latitude
+  = f.hidden_field :longitude
+  .actions
+    = f.submit '現在地から近いレコードを検索'

@@ -69,6 +69,6 @@ class ArticlesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
       params.require(:article)["user_id"] = current_user.id
-      params.require(:article).permit(:title, :text, :user_id, :image)
+      params.require(:article).permit(:title, :text, :user_id, :image, location_attributes: [:latitude, :longitude])
     end
 end

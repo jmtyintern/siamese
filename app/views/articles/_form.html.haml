@@ -1,3 +1,5 @@
+- javascript_include_tag 'app/assets/javascripts/get_current_location.js'
+
 = form_for @article do |f|
   - if @article.errors.any?
     #error_explanation
@@ -15,5 +17,9 @@
   .field
     = f.label :image
     = f.file_field :image
+
+    = f.fields_for :location do |l|
+      = l.hidden_field :latitude
+      = l.hidden_field :longitude
   .actions
     = f.submit 'Save'

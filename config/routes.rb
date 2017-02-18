@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   resources :articles
+  resources :locations do
+    post :near_by, on: :collection
+  end
   devise_for :users, controllers: {
         sessions: 'users/sessions'
   }

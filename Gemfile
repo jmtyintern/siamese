@@ -58,6 +58,7 @@ group :development do
   gem 'pry-stack_explorer' # スタックをたどれる
   gem 'carrierwave'
   gem 'rmagick', require: 'RMagick'
+  gem 'geocoder'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
