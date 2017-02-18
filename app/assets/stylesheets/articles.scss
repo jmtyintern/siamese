@@ -1,3 +1,20 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.cut {
+	position: relative;
+	float: left;
+	overflow: hidden;	/*不要部分の切り取り*/
+	height: 100px;		/*正方形にしたい高さサイズ*/
+	width: 100px;		/*正方形にしたい横幅サイズ*/
+	display: block;		/*spanなのでblock要素にする*/
+	margin:0 0px 0px 0;
+  .cut_image {			/*縦・横の画像でも一応見れるように微妙に調整されています。*/
+  	diaplay: block;
+  	height: 150px;
+  	position: absolute;
+  	left: -50px;
+  	top: -20px;
+  }
+
+}

@@ -1,25 +1,5 @@
-%h1 Listing articles
-
-%table
-  %thead
-    %tr
-      %th Title
-      %th Text
-      %th image
-      %th
-      %th
-
-  %tbody
-    - @articles.each do |article|
-      %tr
-        %td= article.title
-        %td= article.text
-        - if article.image.present?
-          %td= image_tag article.image_url(:thumb)
-        %td= link_to 'Show', article
-        %td= link_to 'Edit', edit_article_path(article)
-        %td= link_to 'Destroy', article, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
-= link_to 'New Article', new_article_path
+- articles = has_image_article
+- articles.each do |article|
+  %span.cut
+    .cut_image
+      = link_to (image_tag article.image_url(:thumb)), article
