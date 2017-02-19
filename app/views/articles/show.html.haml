@@ -16,7 +16,8 @@
 = link_to 'Back', articles_path
 
 #favorite
-  = render 'favorite_articles', article: @article
+  = render 'favorites/favorite_articles', article: @article
 
-%p
-  = link_to @article.favorites.count, root_path, id: 'favorite-count'
+= link_to @article.favorites.count, root_path, id: 'favorite-count'
+%span
+♡

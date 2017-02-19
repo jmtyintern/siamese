@@ -1,9 +1,0 @@
-- if user_signed_in?
-  %p favoriteがはいる
-  - if current_user.favorites.find_by(article_id: @article)
-    = link_to "♡を消す(unfavorite!!!)", unfavorite_path(@article.id), method: :delete, remote: true, class: 'btn btn-danger'
-  - else
-    = link_to "♡", favorite_path(@article.id), method: :post, remote: true, class: 'btn btn-danger'
-
-- else
-  %p ログインしてください
