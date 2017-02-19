@@ -70,7 +70,7 @@ p {
   float: right !important;
 }
 
-// header 
+// header
 header{
   height: 40px;
   width: auto;
@@ -105,4 +105,21 @@ header{
   color: black;
   text-decoration:underline;
   background-color: white;
+}
+
+// スマホフッター
+.footer_smart {
+    height: 140px;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    ul {
+      list-style:none;
+      margin-left: 70px;
+      li {
+        font-size: 30px;
+        margin: 20px 30px 50px 0px;
+      }
+    }
 }

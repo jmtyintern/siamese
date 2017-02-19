@@ -1,2 +1,9 @@
-%h1 Top#index
-%p Find me in app/views/top/index.html.haml
+%h1 タイムライン
+= render "image_list"
+.footer_smart
+  %ul{class:"navbar-nav"}
+    %li= link_to image_tag("header/seetive.jpg", height: "100", alt: "rails logo"), root_path
+    %li= link_to image_tag("header/seetive.jpg", height: "100", alt: "rails logo"), root_path
+    %li= link_to image_tag("header/seetive.jpg", height: "100", alt: "rails logo"), root_path
+    %li= link_to image_tag("header/seetive.jpg", height: "100", alt: "rails logo"), root_path
+    %li= link_to image_tag("header/seetive.jpg", height: "100", alt: "rails logo"), root_path
