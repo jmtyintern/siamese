@@ -16,5 +16,27 @@
   	left: -50px;
   	top: -20px;
   }
+}
 
+.page-title {
+  background-color: white;
+}
+
+.right_menu{
+  background-color: white;
+	width:170px;
+	height:300px;
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-right:0px;
+	padding-left:0px;
+	margin:0px;
+	float:left;
+	line-height:200%;
+  float: right !important;
+  ul {
+    list-style:none;
+    padding-left: 0px;
+    margin-left: 15px;
+  }
 }

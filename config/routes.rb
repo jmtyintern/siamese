@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {
         sessions: 'users/sessions'
   }
-  root 'top#index'
+  root 'articles#index'
   get 'show' => 'top#show'
 
   #get 'users/seccitons/show'
