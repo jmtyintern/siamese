@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   }
   root 'articles#index'
   get 'show' => 'top#show'
-
+  get 'smart'=> 'top#index'
   #get 'users/seccitons/show'
 
 
