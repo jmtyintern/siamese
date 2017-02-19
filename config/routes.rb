@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'smartphone/index'
+
   resources :articles
   devise_for :users, controllers: {
         sessions: 'users/sessions'
@@ -6,6 +8,7 @@ Rails.application.routes.draw do
   root 'articles#index'
   get 'show' => 'top#show'
 
+  get 'smartphone' => 'smartphone#index'
   #get 'users/seccitons/show'
 
 
