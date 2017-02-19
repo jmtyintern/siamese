@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {
         sessions: 'users/sessions'
   }
+  post   '/favorite/:article_id'   => 'favorites#like',   as: 'favorite'
+  delete '/unfavorite/:article_id' => 'favorites#unlike', as: 'unfavorite'
   root 'articles#index'
   get 'show' => 'top#show'
 

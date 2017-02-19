@@ -1,0 +1,3 @@
+$('#favorite').html('<%= escape_javascript(render("articles/like_favorites", article: @article)) %>');
+
+$('#favorite-count').html('<%= @article.favorites.count %>');
