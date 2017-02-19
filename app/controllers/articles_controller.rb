@@ -14,7 +14,8 @@ class ArticlesController < ApplicationController
 
   # GET /articles/new
   def new
-    @article = Article.new
+    @article  = Article.new
+    @location = Location.new
   end
 
   # GET /articles/1/edit
@@ -25,6 +26,16 @@ class ArticlesController < ApplicationController
   # POST /articles.json
   def create
     @article = Article.new(article_params)
+    @location = Location.new
+    location_name = "未完成"
+
+    if existed_location = Location.where(name: location_name).first
+      @article.location_id = existed_location.id
+    else
+      @location.save
+      @article.location_id = @location.id
+    end
+
     respond_to do |format|
       if @article.save
         format.html { redirect_to @article, notice: 'Article was successfully created.' }
