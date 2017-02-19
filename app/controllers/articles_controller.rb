@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
+  before_filter :check_user_agent_for_mobile
 
   # GET /articles
   # GET /articles.json
