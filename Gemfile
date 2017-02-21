@@ -4,7 +4,8 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
-gem 'xray-rails'
+
+
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'haml-rails'
@@ -46,6 +47,9 @@ group :development, :test do
 end
 
 group :development do
+  gem 'xray-rails'
+  gem "rubocop"
+  gem 'better_errors'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.0.5'
