@@ -29,8 +29,9 @@ class ArticlesController < ApplicationController
     @location = Location.new
     location_name = "未完成"
 
-    if existed_location = Location.where(name: location_name).first
+    if existed_location = Location.where(name: location_name).first #データベースに保存されてるか確認
       @article.location_id = existed_location.id
+      @article.save
     else
       @location.save
       @article.location_id = @location.id
