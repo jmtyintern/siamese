@@ -1,10 +1,11 @@
-%header{class:"navbar-fixed-top head"}
-  = link_to "SeeTive", root_path, id: "logo"
-  %ul{class:"navbar-nav right header_content"}
-    %li= link_to image_tag("header/seetive.jpg", height: "40", alt: "rails logo"), root_path, class: "margin_right10"
+.header{class:"navbar-fixed-top"}
+  .header_left_content
+    = link_to "SeeTive", root_path, id:'logo'
+  .header_right_content
+    = link_to image_tag("header/seetive.jpg", height: "40", alt: "rails logo"), root_path
     - if user_signed_in?
-      %li= link_to "投稿する", new_article_path, class: "btn btn-default margin_right10"
-      %li= link_to "ログアウト", destroy_user_session_path, class: "btn btn-default margin_right30"
+      = link_to "投稿する", new_article_path, class: "btn btn-default"
+      = link_to "ログアウト", destroy_user_session_path, class: "btn btn-default"
     - else
-      %li= link_to "会員登録", new_user_registration_path, class: "btn btn-default margin_right10"
-      %li= link_to "ログイン", new_user_session_path, class: "btn btn-default  margin_right30"
+      = link_to "会員登録", new_user_registration_path, class: "btn btn-default"
+      = link_to "ログイン", new_user_session_path, class: "btn btn-default"
