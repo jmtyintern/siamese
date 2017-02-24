@@ -63,6 +63,7 @@ group :development do
   gem 'carrierwave'
   gem 'rmagick', require: 'RMagick'
   gem 'google_places'
+  gem 'geocoder'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

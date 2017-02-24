@@ -15,5 +15,9 @@
   .field
     = f.label :image
     = f.file_field :image
+  .field
+    = f.label :location
+    = f.text_field :location, :id => "textField"
+  %script{:src => "http://maps.googleapis.com/maps/api/js?libraries=places", :type => "text/javascript"}
   .actions
     = f.submit 'Save'
