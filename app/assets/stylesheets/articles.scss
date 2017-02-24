@@ -21,22 +21,28 @@
 .page-title {
   background-color: white;
 }
+.article_index {
+	display: flex;
+	justify-content: space-between;
+	padding: 40px;
+}
+.right_box {
+	height: 1000px;
+	background-color: white;
+	box-shadow: 0 1px 2px rgba(0,0,0,.1);
+	display: flex;
+	flex-flow: column nowrap; 
+}
 
-.right_menu{
-  background-color: white;
-	width:170px;
+.right_menu {
 	height:300px;
-	padding-top:0px;
-	padding-bottom:0px;
-	padding-right:0px;
-	padding-left:0px;
-	margin:0px;
-	float:left;
-	line-height:200%;
-  float: right !important;
-  ul {
-    list-style:none;
-    padding-left: 0px;
-    margin-left: 15px;
-  }
+	background-color: white;
+	ul {
+		list-style:none;
+		padding: 0px;
+	}
+}
+
+.banner0 {
+	text-align: center;
 }
