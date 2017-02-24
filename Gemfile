@@ -6,9 +6,12 @@ git_source(:github) do |repo_name|
 end
 
 
-gem 'bootstrap-sass'
 gem 'devise'
+# View関連
 gem 'haml-rails'
+gem 'bootstrap-sass'
+gem 'active_decorator'
+# テスト
 gem 'rspec-rails'
 gem 'factory_girl_rails'
 
