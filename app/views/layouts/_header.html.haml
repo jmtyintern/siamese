@@ -2,10 +2,9 @@
   .header_left_content
     = link_to "SeeTive", root_path, id:'logo'
   .header_right_content
-    = link_to image_tag("header/seetive.jpg", height: "40", alt: "rails logo"), root_path
-    - if user_signed_in?
-      = link_to "投稿する", new_article_path, class: "btn btn-default"
-      = link_to "ログアウト", destroy_user_session_path, class: "btn btn-default"
-    - else
-      = link_to "会員登録", new_user_registration_path, class: "btn btn-default"
-      = link_to "ログイン", new_user_session_path, class: "btn btn-default"
+    .icon
+      #i.fa.fa-search
+    .icon
+      = link_to image_tag("header/seetive.jpg", height: "40", alt: "rails logo"), root_path
+    .icon
+      #i.fa.fa-bars
