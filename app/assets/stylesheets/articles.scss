@@ -2,19 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .cut {
-	position: relative;
-	float: left;
-	overflow: hidden;	/*不要部分の切り取り*/
-	height: 100px;		/*正方形にしたい高さサイズ*/
-	width: 100px;		/*正方形にしたい横幅サイズ*/
-	display: block;		/*spanなのでblock要素にする*/
-	margin:0 0px 0px 0;
+  position: relative;
+  float: left;
+  overflow: hidden;	/*不要部分の切り取り*/
+  height: 100px;		/*正方形にしたい高さサイズ*/
+  width: 100px;		/*正方形にしたい横幅サイズ*/
+  display: block;		/*spanなのでblock要素にする*/
+  margin:0 0px 0px 0;
   .cut_image {			/*縦・横の画像でも一応見れるように微妙に調整されています。*/
-  	diaplay: block;
-  	height: 150px;
-  	position: absolute;
-  	left: -50px;
-  	top: -20px;
+    diaplay: block;
+    height: 150px;
+    position: absolute;
+    left: -50px;
+    top: -20px;
   }
 }
 
@@ -22,27 +22,27 @@
   background-color: white;
 }
 .article_index {
-	display: flex;
-	justify-content: space-between;
-	padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
 }
 .right_box {
-	height: 1000px;
-	background-color: white;
-	box-shadow: 0 1px 2px rgba(0,0,0,.1);
-	display: flex;
-	flex-flow: column nowrap; 
+  height: 1000px;
+  background-color: white;
+  box-shadow: 0 1px 2px rgba(0,0,0,.1);
+  display: flex;
+  flex-flow: column nowrap; 
 }
 
 .right_menu {
-	height:300px;
-	background-color: white;
-	ul {
-		list-style:none;
-		padding: 0px;
-	}
+  height:300px;
+  background-color: white;
+  ul {
+    list-style:none;
+    padding: 0px;
+  }
 }
 
 .banner0 {
-	text-align: center;
+  text-align: center;
 }
