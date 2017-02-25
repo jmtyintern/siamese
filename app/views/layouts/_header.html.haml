@@ -7,4 +7,15 @@
     .icon
       = link_to image_tag("header/seetive.jpg", height: "40", alt: "rails logo"), root_path
     .icon
-      #i.fa.fa-bars
+      .menu
+        #i.fa.fa-bars
+        %ul.pulldown
+          .list
+            - if user_signed_in?
+              %li= link_to "投稿する", new_article_path
+              %li= link_to "ログアウト", destroy_user_session_path
+              %li= link_to "ログアウト", destroy_user_session_path
+              %li= link_to "ログアウト", destroy_user_session_path
+            - else
+              %li= link_to "会員登録", new_user_registration_path
+              %li= link_to "ログイン", new_user_session_path
