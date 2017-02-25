@@ -26,14 +26,13 @@ class ArticlesController < ApplicationController
   # POST /articles.json
   def create
     @article = Article.new(article_params)
-    @location = Location.new
-    location_name = "未完成"
+    @location = Location.new(location_params)
 
-    if existed_location = Location.where(name: location_name).first
+    if existed_location = Location.where(name: @location.name).first
       @article.location_id = existed_location.id
     else
-      @location.save
-      @article.location_id = @location.id
+      new_location = Location.create(location_params)
+      @article.location_id = new_location.id
     end
 
     respond_to do |format|
@@ -81,5 +80,9 @@ class ArticlesController < ApplicationController
     def article_params
       params.require(:article)["user_id"] = current_user.id
       params.require(:article).permit(:title, :text, :user_id, :image)
+    end
+
+    def location_params
+      params.require(:location).permit(:name)
     end
 end
