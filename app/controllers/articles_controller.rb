@@ -32,7 +32,7 @@ class ArticlesController < ApplicationController
     if existed_location = Location.where(name: location_name).first
       @article.location_id = existed_location.id
     else
-      @location.save
+      Location.create(location_params)
       @article.location_id = @location.id
     end
 
@@ -81,5 +81,9 @@ class ArticlesController < ApplicationController
     def article_params
       params.require(:article)["user_id"] = current_user.id
       params.require(:article).permit(:title, :text, :user_id, :image, :location_id)
+    end
+
+    def location_params
+      params.require(:location).permit(:address)
     end
 end
