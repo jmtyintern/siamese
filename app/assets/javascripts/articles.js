@@ -2,6 +2,12 @@
 // # All this logic will automatically be available in application.js.
 // # You can use CoffeeScript in this file: http://coffeescript.org/
 $(function(){
+  var $menu = $(".menu");
+  $menu.on('click', function(){
+    $(".pulldown").toggle();
+  });
+});
+$(function(){
   var latlngFrom = new google.maps.LatLng(33.889577, 130.885284);
   var latlngTo   = new google.maps.LatLng(33.989577, 130.985284);
   //プレイスを検索する領域

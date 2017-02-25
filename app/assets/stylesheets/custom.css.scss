@@ -99,11 +99,10 @@ p {
   background-color: white;
 }
 
-.icon #i {
+.icon {
   font-size:40px;
   width:60px;
-  display: flex;
-  justify-content: center;
+  margin-top: 15px;
   align-items: center;
   height: 100%;
 }
@@ -124,3 +123,20 @@ p {
     }
   }
 }
+.pulldown {
+  display: none;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  height: 0;
+  transition: .2s;
+}
+.pulldown li:hover {
+  background-color: #eee;
+}
+
+ .list {
+  background-color: white;
+  width: 90px;
+
+ }
