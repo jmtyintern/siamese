@@ -6,12 +6,13 @@ class Article < ApplicationRecord
   validates :text, presence: true
   mount_uploader :image, ImageUploader
 
-	module ArticleDecorator
-  def publication_status
-    if published?
-      "Published at #{published_at.strftime('%A, %B %e')}"
-    else
-      "Unpublished"
+  module ArticleDecorator
+    def publication_status
+      if published?
+        "Published at #{published_at.strftime('%A, %B %e')}"
+      else
+        "Unpublished"
+      end
     end
   end
 end
