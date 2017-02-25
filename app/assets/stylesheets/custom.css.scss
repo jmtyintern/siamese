@@ -83,7 +83,8 @@ p {
     padding-top:25px;
   }
   .header_right_content{
-    padding-top: 20px;
+    display: flex;
+    -webkit-justify-content: space-between; /* Safari */
     justify-content: space-between;
   }
 }
@@ -96,6 +97,15 @@ p {
   color: black;
   text-decoration:underline;
   background-color: white;
+}
+
+.icon #i {
+  font-size:40px;
+  width:60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 // スマホフッター
