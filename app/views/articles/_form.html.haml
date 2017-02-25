@@ -17,7 +17,7 @@
     = f.file_field :image
   .field
     = fields_for @location do |c|
-      = c.text_field :address, :id => "textField"
+      = c.text_field :name, :id => "textField"
   %script{:src => "http://maps.googleapis.com/maps/api/js?libraries=places", :type => "text/javascript"}
   .actions
     = f.submit 'Save'
