@@ -63,7 +63,10 @@ group :development do
   gem 'pry-doc'    # methodを表示
   gem 'pry-byebug' # デバッグを実施(Ruby 2.0以降で動作する)
   gem 'pry-stack_explorer' # スタックをたどれる
+  # 写真
   gem 'carrierwave'
+  gem 'mini_magick'
+
   gem 'rmagick', require: 'RMagick'
   gem 'google_places'
   gem 'geocoder'

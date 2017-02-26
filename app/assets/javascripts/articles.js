@@ -12,7 +12,8 @@ $(function(){
   //プレイスを検索する領域
   var bounds = new google.maps.LatLngBounds(latlngFrom, latlngTo);
   //検索文字列を取得
-  var $input = $('#textField');
+  var input = document.getElementById('textField');
+  ;
   //検索オプション
   var options = {
     bounds: bounds,
@@ -20,5 +21,5 @@ $(function(){
     componentRestrictions: {country: 'jp'}
   };
   //オートコンプリート
-  autocomplete = new google.maps.places.Autocomplete($input,options);
+  autocomplete = new google.maps.places.Autocomplete(input,options);
 });
