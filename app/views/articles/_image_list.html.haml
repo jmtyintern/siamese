@@ -1,5 +1,5 @@
 - articles = has_image_article
-- articles.each do |article|
-  %span.cut
-    .cut_image
-      = link_to (image_tag article.image_url(:thumb)), article
+.image_lists
+  - articles.each do |article|
+    .margin_bottom10
+      = link_to (image_tag article.image_url(:thumb)), article, class: "margin_bottom10"
