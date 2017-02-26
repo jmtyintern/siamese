@@ -66,6 +66,9 @@ p {
 .margin_left10{
   margin-left: 10px
 }
+.margin_bottom10{
+  margin-bottom: 10px
+}
 .right{
   float: right !important;
 }
@@ -139,4 +142,9 @@ p {
   background-color: white;
   width: 90px;
 
+ }
+
+ .image_lists {
+  display: flex;
+  flex-wrap: wrap;
  }
