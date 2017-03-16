@@ -5,6 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'prmd' # JSON-Hyper-Schemaの管理用
+gem 'active_model_serializers'
 
 gem 'devise'
 # View関連
