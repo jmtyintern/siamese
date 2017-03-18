@@ -5,7 +5,11 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# ログ取るのに使ってる
+gem 'mongoid'
+gem 'bson_ext'
 
+gem 'active_model_serializers'
 gem 'devise'
 # View関連
 gem 'haml-rails'

@@ -1,6 +1,5 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
-
   # GET /articles
   # GET /articles.json
   def index
@@ -10,6 +9,7 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
+    save_log if user_signed_in?
   end
 
   # GET /articles/new
@@ -84,5 +84,14 @@ class ArticlesController < ApplicationController
 
     def location_params
       params.require(:location).permit(:name)
+    end
+
+    def save_log
+      ActionLog.create!(
+        datetime: Time.zone.now,
+        article_id: params[:id],
+        user_id: current_user[:id],
+        delete: false
+        )
     end
 end
